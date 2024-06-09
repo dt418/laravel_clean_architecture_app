@@ -1,33 +1,37 @@
+<?php
+
 namespace App\Domain\Entities;
 
 class User
 {
-private $id;
-private $name;
-private $email;
+    private $id;
 
-public function getId()
-{
-return $this->id;
-}
+    private $name;
 
-public function getName()
-{
-return $this->name;
-}
+    private $email;
 
-public function getEmail()
-{
-return $this->email;
-}
+    public function getId()
+    {
+        return $this->id;
+    }
 
-public function setName($name)
-{
-$this->name = $name;
-}
+    public function getName()
+    {
+        return $this->name;
+    }
 
-public function setEmail($email)
-{
-$this->email = $email;
-}
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
 }
