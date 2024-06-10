@@ -9,12 +9,12 @@ class EloquentUserRepository implements UserRepository
 {
     public function save(User $user): User
     {
-        $eloquentUser = EloquentUser::updateOrCreate(
+        EloquentUser::updateOrCreate(
             ['id' => $user->getId()],
             ['name' => $user->getName(), 'email' => $user->getEmail()]
         );
 
-        return $eloquentUser;
+        return $user;
     }
 
     public function findById(string $id): ?User
